@@ -33,6 +33,8 @@ OAuth.registerService('linkedin', 2, null, function(query) {
 
   _.extend(serviceData, fields);
 
+  serviceData.emailAddress = serviceData.emailAddress && serviceData.emailAddress.toLowerCase();
+
   return {
     serviceData: serviceData,
     options: {
